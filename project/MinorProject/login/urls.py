@@ -17,5 +17,6 @@ from django.contrib import admin
 from django.urls import path
 from .import views
 urlpatterns = [
-    path("",views.index,name="login")
+    path("",views.index,name="login"),
+    path("newuser",views.newuser,name="newuser"),
 ]
