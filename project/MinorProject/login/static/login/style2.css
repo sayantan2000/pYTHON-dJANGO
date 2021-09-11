@@ -1,5 +1,6 @@
 .register{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    ba
     margin-top: 3%;
     padding: 3%;
 }
@@ -9,6 +10,7 @@
     margin-top: 4%;
 }
 .register-left input{
+    opacity: 120%;
     border: none;
     border-radius: 1.5rem;
     padding: 2%;
@@ -92,4 +94,13 @@
     margin-top: 8%;
     margin-bottom: -15%;
     color: #495057;
+}
+body{
+    background-color:#3931af;
+    background: cross-fade();
+    background-blend-mode: color-dodge;
+   opacity: 78.9%;
+
+
+    
 }
