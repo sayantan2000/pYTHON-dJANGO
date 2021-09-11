@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+#djtext = request.GET.get('text', 'default')
 
 def index(request):
     return render(request, 'index.html')
@@ -19,6 +20,7 @@ def analyze(request):
     if removepunc == "on":
         punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
         analyzed = ""
+        
         for char in djtext:
             if char not in punctuations:
                 analyzed = analyzed + char
@@ -62,6 +64,7 @@ def analyze(request):
             return HttpResponse("cannot convert")
     else:
         return HttpResponse("Error")
+
 
 
 
