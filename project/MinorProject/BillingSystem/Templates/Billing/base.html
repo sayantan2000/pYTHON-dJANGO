@@ -1,7 +1,7 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
 
     <title>Billing</title>
 </head>
- 
+
 
 <body>
     <!--Navbar-->
@@ -51,25 +51,32 @@
                         </li>
 
                     </ul>
-                    <form class="d-flex">
+                    <form class="d-flex" method="GET">
+                        {% csrf_token %} 
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                             size="90cm">
+                    </form>
+                    <form class="d-flex">
+                        {% csrf_token %} 
                         <button class="btn btn-outline-" type="submit" style="color:#34495E;">Search</button>
-
-
+                    </form>
+                    <form class="d-flex" method="GET" action="/signup">
+                        <button class="btn btn-outline-" type="submit" style="color:#34495E;">Signup</button>
+                    </form>
+                    <form class="d-flex">
+                        {% csrf_token %} 
                         <button class="btn btn-outline-" type="submit" style="color:#34495E;">Login</button>
-
-
-                        <button class="btn btn-outline-" type="submit" style="color:#34495E;">SignUp</button>
-
-
-                        <button class="btn btn-outline-Secondary" type="submit" style="color:#34495E;">LogOut</button>
+                    </form>
+                    <form class="d-flex">
+                        {% csrf_token %} 
+                        <button class="btn btn-outline-Secondary" type="submit" style="color:#34495E;">Logout</button>
+                    </form>
                     </form>
                 </div>
             </div>
         </nav>
     </div>
-     <!--Navbar-->
+    <!--Navbar-->
 
 
 
